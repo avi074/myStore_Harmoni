@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+    --radius: 0.6rem;
+}
+
+@theme inline {
+    --radius-sm: calc(var(--radius) - 4px);
+    --radius-md: calc(var(--radius) - 2px);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) + 4px);
+}
+
+* {
+    font-family: inherit;
+}
+
+body {
+    font-family: "Roboto", "Raleway", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+.font-poppins{
+    font-family: "Poppins", serif;
+}
+
+.font-merriweather{
+    font-family: "Merriweather", serif;
+}
+
+.font-raleway{
+    font-family: "Raleway", sans-serif;
+}
+
+.font-roboto{
+    font-family: "Roboto", sans-serif;
+}
+
+.pop-width{
+    @apply xl:w-96 lg:w-68 w-[170px];
+}
+
+.footer-sections{
+    @apply w-fit md:w-1/4 mb-6 md:mb-0 text-center;
+}
